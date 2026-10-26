@@ -136,9 +136,9 @@ function setOpts(c){
 }
 
 function render(){
+  idx=Math.max(0,Math.min(idx,C.length-1));
   const c=cur();
   if(!c){return}
-  idx=Math.max(0,Math.min(idx,C.length-1)); c=cur();
   const pr=priceFor(c), val=valFor(c), sell=val*0.72;
   const st=statusOf(c);
   const nm=nameFor(c), set=setFor(c);
